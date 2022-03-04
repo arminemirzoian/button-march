@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ButtonReact from "./components/Button";
+import {iconUsd, iconButterfly} from "./assets/icons";
+import {ButtonStyled} from "./components/Button.styled"
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <ButtonStyled>
+        <ButtonReact
+            type="button"
+            boxSize="btn--box--small"
+            buttonStyle="btn--secondary--solid"
+            buttonSize="btn--small"
+            disabled={false}
+            icon={iconUsd}
         >
-          Learn React
-        </a>
-      </header>
+            BUTTON</ButtonReact>
+        </ButtonStyled>
     </div>
   );
 }
