@@ -3,7 +3,8 @@ import {BOX, SIZES, STYLES} from "../helpers/constants";
 import PropTypes from "prop-types";
 import {iconUsd, iconButterfly} from "../assets/icons";
 import {Box} from "@mui/material";
-import { SvgIcon } from '@mui/material';
+import {SvgIcon} from '@mui/material';
+
 function ButtonReact({children, type, buttonStyle, buttonSize, boxSize, disabled, icon, onClick}) {
 
     const Icon = useRef();
@@ -28,7 +29,7 @@ function ButtonReact({children, type, buttonStyle, buttonSize, boxSize, disabled
         <Box component="div" className="btn-border">
             <Box component="div" className={`${checkBoxSize}`}>
                 <SvgIcon className="icon" ref={Icon} width="20" height="20" viewBox="0 0 20 20" fill="none"
-                     xmlns="http://www.w3.org/2000/svg"> {!isLoading && icon}
+                         xmlns="http://www.w3.org/2000/svg"> {!isLoading && icon}
                 </SvgIcon>
                 <button
                     onClick={fetchData}
@@ -48,14 +49,15 @@ function ButtonReact({children, type, buttonStyle, buttonSize, boxSize, disabled
 }
 
 ButtonReact.defaultProps = {
-    type:"button",
-    boxSize:"btn--box--medium",
-    buttonStyle:"btn--secondary--solid",
-    buttonSize:"btn--medium",
-    disabled:false,
+    type: "button",
+    boxSize: "btn--box--medium",
+    buttonStyle: "btn--secondary--solid",
+    buttonSize: "btn--medium",
+    disabled: false,
     isLoading: false,
-    onClick: () => {},
-    icon:iconUsd
+    onClick: () => {
+    },
+    icon: iconUsd
 };
 
 
