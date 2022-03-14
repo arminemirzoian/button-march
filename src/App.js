@@ -6,7 +6,7 @@ function App() {
         <div className="App">
             <ButtonReact
                 type="button"
-                size="large"
+                size="medium"
                 buttonStyle="btn--primary--solid"
                 disabled={false}>
                 BUTTON

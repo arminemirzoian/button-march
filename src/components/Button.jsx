@@ -27,7 +27,7 @@ const STYLES = [
 const SIZES = ["large", "medium", "small"];
 const BOX = ["large", "medium", "small"];
 
-function ButtonReact({children, type, buttonStyle, size, disabled, onClick}) {
+function ButtonReact({children, type, buttonStyle, size, disabled}) {
 
     const [isLoading, setIsLoading] = useState(false);
 
@@ -49,7 +49,7 @@ function ButtonReact({children, type, buttonStyle, size, disabled, onClick}) {
         <ButtonStyled>
             <Box component="div" className="btn-border">
                 <Box className={checkBoxSize}>
-                    {!isLoading && <Icon iconName='usdIcon'/>}
+                    {!isLoading && <Icon/>} {/* give the Icon name to see the icon iconName='iconName'*/}
                     <button
                         onClick={fetchData}
                         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
@@ -72,8 +72,7 @@ ButtonReact.defaultProps = {
     buttonStyle: "btn--secondary--solid",
     disabled: false,
     isLoading: false,
-    onClick: () => {
-    },
+    onClick: () => {},
 };
 
 

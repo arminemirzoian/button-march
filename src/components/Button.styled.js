@@ -1,10 +1,31 @@
 import styled from 'styled-components';
 
 export const ButtonStyled = styled.div`
-  background: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: univiaPro;
+  transition: transitions('border-color', 'background-color');
   color: white;
-  font-family: Univia Pro;
-  font-weight: 400;
+
+  &:before {
+    transition: transitions('background-color');
+    inset: 4px;
+  }
+
+  &.large {
+    padding: 12px 44px;
+  }
+
+  &.medium {
+    padding: 14px 28px;
+  }
+
+  &.small {
+    padding: 8px 16px;
+  }
 
   .large .loader {
     position: absolute;
@@ -13,7 +34,7 @@ export const ButtonStyled = styled.div`
 
   .large .icon {
     position: absolute;
-    margin-top: 1%;
+    margin-top: 1.1%;
     margin-left: 35px;
   }
 
@@ -24,7 +45,7 @@ export const ButtonStyled = styled.div`
 
   .medium .icon {
     position: absolute;
-    margin-top: 0.9%;
+    margin-top: 1%;
     margin-left: 28px;
   }
 
@@ -37,10 +58,9 @@ export const ButtonStyled = styled.div`
     position: absolute;
     height: 16.67px;
     width: 16.67px;
-    margin-top: 0.95%;
+    margin-top: 0.9%;
     margin-left: 25px;
   }
-
 
   .btn {
     font-weight: 400;
@@ -413,46 +433,27 @@ export const ButtonStyled = styled.div`
   .large {
     height: 56px;
     width: 198px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
   }
 
   .medium {
     height: 52px;
     width: 178px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
   }
 
   .small {
     height: 46px;
     width: 158px;
-  }
-
-  .large {
-    padding: 14.5px 61.5px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: 0;
-    text-align: left;
-  }
-
-  .medium {
-    padding: 12.5px 51.5px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 19px;
-    letter-spacing: 0;
-    text-align: left;
-  }
-
-  .small {
-    padding: 10.5px 45.6px;
     font-size: 14px;
-    font-style: normal;
+    line-height: 16.8px;
     font-weight: 700;
-    line-height: 17px;
-    letter-spacing: 0;
-    text-align: left;
   }
+
+
 
 `;
