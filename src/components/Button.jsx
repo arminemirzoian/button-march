@@ -1,9 +1,31 @@
 import React, {useState} from 'react';
-import {BOX, SIZES, STYLES} from "../helpers/constants";
 import PropTypes from "prop-types";
 import {Box} from "@mui/material";
-import Icon from "./../assets/icons"
+import Icon from "./../assets/icons";
+import {ButtonStyled} from "./Button.styled";
 
+const STYLES = [
+    "btn--primary",
+    "btn--primary--solid",
+    "btn--secondary",
+    "btn--secondary--solid",
+    "btn--darkGrey--solid",
+    "btn--green--solid",
+    "btn--blue--solid",
+    "btn--red--solid",
+    "btn--yellow--solid",
+    "btn--grey--solid",
+    "btn--transparentGrey--solid",
+    "btn--darkGrey--outlined",
+    "btn--green--outlined",
+    "btn--blue--outlined",
+    "btn--red--outlined",
+    "btn--yellow--outlined",
+    "btn--grey--outlined",
+    "btn--transparentGrey--outlined"
+]
+const SIZES = ["large", "medium", "small"];
+const BOX = ["large", "medium", "small"];
 
 function ButtonReact({children, type, buttonStyle, size, disabled, onClick}) {
 
@@ -24,22 +46,23 @@ function ButtonReact({children, type, buttonStyle, size, disabled, onClick}) {
     const checkBoxSize = BOX.includes(size) ? size : BOX[0];
 
     return (
-        <Box component="div" className="btn-border">
-            <Box className={checkBoxSize} >
-                {!isLoading && <Icon iconName='usdIcon'/>}
-                <button
-                    onClick={fetchData}
-                    className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-                    type={type}
-                    disabled={disabled}>
-                    {isLoading && (
-                        <i className="fa fa-refresh fa-spin loader" aria-hidden="true"/>
-                    )}
-                    {isLoading ? children : "BUTTON"}
-                </button>
+        <ButtonStyled>
+            <Box component="div" className="btn-border">
+                <Box className={checkBoxSize}>
+                    {!isLoading && <Icon iconName='usdIcon'/>}
+                    <button
+                        onClick={fetchData}
+                        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                        type={type}
+                        disabled={disabled}>
+                        {isLoading && (
+                            <i className="fa fa-refresh fa-spin loader" aria-hidden="true"/>
+                        )}
+                        {isLoading ? children : "BUTTON"}
+                    </button>
+                </Box>
             </Box>
-        </Box>
-
+        </ButtonStyled>
     );
 }
 
