@@ -18,6 +18,6 @@ export const STYLES = [
     "btn--grey--outlined",
     "btn--transparentGrey--outlined"
 ]
-export const SIZES = ["btn--large", "btn--medium", "btn--small"];
-export const BOX = ["btn--box--large", "btn--box--medium", "btn--box--small"]
+export const SIZES = ["large", "medium", "small"];
+export const BOX = ["large", "medium", "small"]
 

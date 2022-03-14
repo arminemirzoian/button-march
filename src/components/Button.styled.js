@@ -6,34 +6,34 @@ export const ButtonStyled = styled.div`
   font-family: Univia Pro;
   font-weight: 400;
 
-  .btn--box--large .loader {
+  .large .loader {
     position: absolute;
     margin-left: -30px;
   }
 
-  .btn--box--large .icon {
+  .large .icon {
     position: absolute;
     margin-top: 1%;
     margin-left: 35px;
   }
 
-  .btn--box--medium .loader {
+  .medium .loader {
     position: absolute;
     margin-left: -30px;
   }
 
-  .btn--box--medium .icon {
+  .medium .icon {
     position: absolute;
     margin-top: 0.9%;
     margin-left: 28px;
   }
 
-  .btn--box--small .loader {
+  .small .loader {
     position: absolute;
     margin-left: -25px;
   }
 
-  .btn--box--small .icon {
+  .small .icon {
     position: absolute;
     height: 16.67px;
     width: 16.67px;
@@ -410,22 +410,22 @@ export const ButtonStyled = styled.div`
 
   /*Button sizes*/
 
-  .btn--box--large {
+  .large {
     height: 56px;
     width: 198px;
   }
 
-  .btn--box--medium {
+  .medium {
     height: 52px;
     width: 178px;
   }
 
-  .btn--box--small {
+  .small {
     height: 46px;
     width: 158px;
   }
 
-  .btn--large {
+  .large {
     padding: 14.5px 61.5px;
     font-size: 16px;
     font-style: normal;
@@ -435,7 +435,7 @@ export const ButtonStyled = styled.div`
     text-align: left;
   }
 
-  .btn--medium {
+  .medium {
     padding: 12.5px 51.5px;
     font-size: 16px;
     font-style: normal;
@@ -445,7 +445,7 @@ export const ButtonStyled = styled.div`
     text-align: left;
   }
 
-  .btn--small {
+  .small {
     padding: 10.5px 45.6px;
     font-size: 14px;
     font-style: normal;

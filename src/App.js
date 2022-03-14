@@ -1,6 +1,5 @@
 import './App.css';
 import ButtonReact from "./components/Button";
-import {iconUsd, iconButterfly} from "./assets/icons";
 import {ButtonStyled} from "./components/Button.styled"
 
 
@@ -10,11 +9,9 @@ function App() {
             <ButtonStyled>
                 <ButtonReact
                     type="button"
-                    boxSize="btn--box--small"
-                    buttonStyle="btn--secondary--solid"
-                    buttonSize="btn--small"
+                    size="large"
+                    buttonStyle="btn--primary--solid"
                     disabled={false}
-                    icon={iconUsd}
                 >
                     BUTTON</ButtonReact>
             </ButtonStyled>
