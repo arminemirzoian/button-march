@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {green, grey, yellow} from "@mui/material/colors";
 
-
 export const ButtonStyled = styled.button`
   position: relative;
   display: flex;
